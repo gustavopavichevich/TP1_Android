@@ -8,8 +8,11 @@ import android.widget.TextView;
 
 public class Calculadora extends AppCompatActivity {
     TextView resultado;
+    float valorReal1 = 0;
+    float valorReal2 = 0;
     float valor1=0;
     float valor2=0;
+    float res = 0;
     float n1=0;
     float n2=0;
     float n3=0;
@@ -116,6 +119,62 @@ public class Calculadora extends AppCompatActivity {
         }
     }
 
+    public void EscribirMas(View view) {
+        operacion  = "+";
+        valorReal1=Float.parseFloat(resultado.getText().toString());
+        resultado.setText("0");
+    }
+    public void EscribirDividir(View view) {
+        operacion  = "/";
+        valorReal1=Float.parseFloat(resultado.getText().toString());
+        resultado.setText("0");
+    }
+    public void EscribirPor(View view) {
+        operacion  = "*";
+        valorReal1=Float.parseFloat(resultado.getText().toString());
+        resultado.setText("0");
+    }
+    public void EscribirMenos(View view) {
+        operacion  = "-";
+
+        valorReal1=Float.parseFloat(resultado.getText().toString());
+        resultado.setText("0");
+    }
+
+    public void Resultado(View view) {
+        valorReal2=Float.parseFloat(resultado.getText().toString());
+
+        if(operacion.equals("+")){
+            resultado.setText("");
+            res = valorReal1 + valorReal2;
+        }
+        if(operacion.equals("-")){
+            resultado.setText("");
+            res = valorReal1 - valorReal2;
+        }
+        if(operacion.equals("*")){
+            resultado.setText("");
+            res = valorReal1 * valorReal2;
+        }
+        if(operacion.equals("/")){
+            resultado.setText("");
+            if(valorReal2 != 0){
+                res = valorReal1 / valorReal2;
+            }else {
+                resultado.setText("Error");
+            }
+        }
+        resultado.setText(String.valueOf(res));
+        valor1=0;
+         valor2=0;
+        valorReal2=0;
+        valorReal1=0;
+   //     resultado.setText("0");
+     //   valor1=0;
+      //  valor2=0;
+     //   operacion="";
+    }
+
     public void BorrarResultado(View view) {
         resultado.setText("0");
         valor1=0;
@@ -123,9 +182,4 @@ public class Calculadora extends AppCompatActivity {
         operacion="";
     }
 
-    public void Sumar(View view) {
-    }
-
-    public void Restar(View view) {
-    }
 }
