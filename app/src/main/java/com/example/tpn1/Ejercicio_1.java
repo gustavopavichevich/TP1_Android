@@ -34,9 +34,10 @@ public class Ejercicio_1 extends AppCompatActivity {
         String valor1 = et1.getText().toString();
         String valor2 = et2.getText().toString();
 
-        int num1 = Integer.parseInt(valor1);
-        int num2 = Integer.parseInt(valor2);
-
+        int num1 = 0;
+        int num2 = 0;
+        num1 = Integer.parseInt(valor1);
+        num2 = Integer.parseInt(valor2);
         int sum = num1 + num2;
 
         String result;

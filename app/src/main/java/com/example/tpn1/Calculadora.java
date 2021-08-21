@@ -31,7 +31,6 @@ public class Calculadora extends AppCompatActivity {
         setContentView(R.layout.calculadora);
         this.setTitle("Calculadora");
         resultado=findViewById(R.id.resultadoText);
-        //resultado.setText("bien");
     }
     public void Escribir0(View view) {
         valor1=Float.parseFloat(resultado.getText().toString());
@@ -136,7 +135,6 @@ public class Calculadora extends AppCompatActivity {
     }
     public void EscribirMenos(View view) {
         operacion  = "-";
-
         valorReal1=Float.parseFloat(resultado.getText().toString());
         resultado.setText("0");
     }
@@ -158,21 +156,17 @@ public class Calculadora extends AppCompatActivity {
         }
         if(operacion.equals("/")){
             resultado.setText("");
-            if(valorReal2 != 0){
+            try {
                 res = valorReal1 / valorReal2;
-            }else {
-                resultado.setText("Error");
+            }catch(ArithmeticException ex){
+                System.out.println("Division invalida");
             }
         }
         resultado.setText(String.valueOf(res));
         valor1=0;
-         valor2=0;
+        valor2=0;
         valorReal2=0;
         valorReal1=0;
-   //     resultado.setText("0");
-     //   valor1=0;
-      //  valor2=0;
-     //   operacion="";
     }
 
     public void BorrarResultado(View view) {
