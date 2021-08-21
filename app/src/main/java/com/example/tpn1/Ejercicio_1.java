@@ -18,6 +18,7 @@ public class Ejercicio_1 extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.suma);
+        this.setTitle("Suma");
         et1 = (EditText) findViewById(R.id.editText_N1);
         et2 = (EditText) findViewById(R.id.editText_N2);
         tv1 = (TextView) findViewById(R.id.txt_suma);
