@@ -10,11 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TPN1">
         <activity
-            android:name=".Calculadora"
-            android:exported="true" />
+            android:name=".listar"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".Ejercicio_1"
-            android:exported="true" />
+            android:name=".agregar"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

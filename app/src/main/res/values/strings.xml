@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">TP N°1</string>
+    <string name="app_name">EjercicioControles - Grupo 6</string>
     <string name="boton_ejercicio1">Ejercicio 1</string>
     <string name="boton_ejercicio2">Ejercicio 2</string>
+
+
+    <string-array name="tipo">
+        <item>Casa</item>
+        <item>Trabajo</item>
+        <item>Movil</item>
+    </string-array>
 </resources>

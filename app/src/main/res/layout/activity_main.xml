@@ -6,46 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/B_ejer_1"
-        android:layout_width="334dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="104dp"
-        android:backgroundTint="#095E85"
-        android:onClick="Ejer_1"
-        android:text="@string/boton_ejercicio1"
-        android:textColor="@color/white"
-        android:textColorHighlight="#B10E0E"
-        android:textColorHint="#CA1212"
-        android:textColorLink="#BC0B0B"
-        app:iconTint="#731E18"
-        app:iconTintMode="add"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/B_ejer_2"
-        android:layout_width="334dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="#095E85"
-        android:onClick="Ejer_2"
-        android:text="@string/boton_ejercicio2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/B_ejer_1" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="144dp"
         android:text="INTEGRANTES:"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/B_ejer_2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="124dp"
+        android:background="#EF0909"
+        android:fontFamily="cursive"
+        android:text="TP2 Controles y almacenamiento"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
